@@ -1,3 +1,11 @@
+(*
+https://www2.lib.uchicago.edu/keith/ocaml-class/apps.html
+
+ocamlbuild simple_cat.ml simple_cat.native
+
+Renamed String.create to Bytes.create
+*)
+
 let cat filename =
   let chan = open_in filename in
   let size = 4 * 1024 in
@@ -6,7 +14,7 @@ let cat filename =
     while not !eof do
       let len = input chan buffer 0 size in
 	if len > 0
-	then print_endline (String.sub( Bytes.to_string buffer) 0 len)
+	then print_string (String.sub( Bytes.to_string buffer) 0 len)
 	else eof := true
     done
 
@@ -16,4 +24,3 @@ let main () =
     Array.iter cat argv
 
 let _ = main ()
-

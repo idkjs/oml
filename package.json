@@ -19,11 +19,11 @@
   "dependencies": {
     "@opam/dune": "*",
     "@opam/lambda-term": "*",
-    "@opam/lwt": "^4.0.0",
-    "ocaml": "~4.6.0"
+    "@opam/lwt": "*",
+    "ocaml": "~4.8.1"
   },
   "devDependencies": {
-    "@opam/merlin": "^3.0.3",
-    "ocaml": "~4.6.0"
+    "@opam/merlin": "*",
+    "ocaml": "~4.8.1"
   }
 }
